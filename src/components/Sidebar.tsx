@@ -59,7 +59,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         <div>
           <label className="block mb-2 font-semibold">Night Lights</label>
           <button
-            className={`px-2 py-1 rounded ${nightLightsEnabled ? 'bg-blue-600' : 'bg-gray-600'} text-xs`}
+            className={`px-2 py-1 text-black rounded ${nightLightsEnabled ? 'bg-blue-600' : 'bg-gray-600'} text-xs`}
             onClick={() => setNightLightsEnabled(!nightLightsEnabled)}
           >
             {nightLightsEnabled ? 'Disable' : 'Enable'} Night Lights
