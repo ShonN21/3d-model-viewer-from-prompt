@@ -1,0 +1,112 @@
+# 3D Model Viewer from Prompt
+
+A real-time, interactive 3D model viewer web app built with React, Three.js, and Tailwind CSS. Upload OBJ/FBX models, explore with orbit/first-person controls, annotate in 3D, and experience dynamic lighting with HDRI and night mode.
+
+---
+
+## ✨ Features
+
+- **Model Upload:**
+  - Upload and view OBJ or FBX 3D models with full mesh/material support.
+- **Camera & Controls:**
+  - Orbit mode (rotate, pan, zoom)
+  - First-person mode (WASD/arrow keys, mouse look, vertical look limit)
+  - Toggle between modes in the UI
+- **Annotations:**
+  - Click to place floating 3D annotations (editable title/description)
+  - Drag/reposition annotations in 3D
+  - Show/hide, edit, and delete annotations in the sidebar
+- **Time-of-Day Lighting:**
+  - Slider to set time (0–24h)
+  - Sun/ambient/skybox lighting changes with time
+- **HDRI Environment:**
+  - Realistic ambient light and sky using HDRI (Polyhaven Venice Sunset)
+- **Night Mode:**
+  - Sunlight dims at night (20:00–06:00)
+  - Artificial lights activate, toggleable in UI
+- **UI:**
+  - Modern sidebar (Tailwind CSS)
+  - Controls for upload, camera, time, night lights, annotations, and reset
+
+---
+
+## 🚀 Getting Started
+
+### 1. **Clone the repository**
+```bash
+git clone <your-repo-url>
+cd 3d-model-viewer-from-prompt
+```
+
+### 2. **Install dependencies**
+```bash
+npm install
+```
+
+### 3. **Add HDRI file**
+- Download `venice_sunset_1k.hdr` from [Polyhaven](https://polyhaven.com/a/venice_sunset)
+- Place it in `public/hdri/venice_sunset_1k.hdr`
+
+### 4. **Run the app**
+```bash
+npm run dev
+```
+- Open [http://localhost:5173](http://localhost:5173) in your browser
+
+---
+
+## 🛠️ Tech Stack
+- **React** (Vite)
+- **Three.js** & @react-three/fiber
+- **@react-three/drei** (controls, helpers)
+- **Tailwind CSS**
+- **OBJLoader, FBXLoader, RGBELoader** (Three.js examples)
+
+---
+
+## 📁 Project Structure
+```
+├── public/
+│   └── hdri/venice_sunset_1k.hdr
+├── src/
+│   ├── components/
+│   │   ├── ModelViewer.tsx
+│   │   └── Sidebar.tsx
+│   ├── utils/
+│   │   └── webglUtils.ts
+│   ├── App.tsx
+│   └── index.css
+├── tailwind.config.js
+├── postcss.config.js
+├── package.json
+└── README.md
+```
+
+---
+
+## 📝 Notes
+- All logic is commented in code for clarity.
+- Model loading, controls, and lighting are optimized for smooth performance.
+- For best results, use modern browsers (Chrome, Edge, Firefox).
+
+## 🔧 Troubleshooting
+
+### WebGL Context Loss Issues
+If you experience a white screen with "THREE.WebGLRenderer: Context Lost" in the console:
+
+1. **Automatic Recovery**: The app now includes automatic WebGL context loss recovery
+2. **Browser Compatibility**: Ensure you're using a modern browser with WebGL support
+3. **Hardware Acceleration**: Enable hardware acceleration in your browser settings
+4. **Memory Issues**: Close other tabs/applications to free up GPU memory
+5. **Driver Updates**: Update your graphics drivers to the latest version
+
+### Performance Tips
+- Use Chrome or Edge for best WebGL performance
+- Close unnecessary browser tabs to free GPU memory
+- Disable browser extensions that might interfere with WebGL
+- If using integrated graphics, ensure hardware acceleration is enabled
+
+---
+
+## 📜 License
+MIT
