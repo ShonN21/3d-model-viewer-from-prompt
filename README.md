@@ -82,6 +82,120 @@ npm run dev
 └── README.md
 ```
 
+## ⌲ Prompt
+Build a complete real-time 3D model viewer web app using React and Threejs with the following features
+
+MODEL UPLOAD
+
+1. Allow users to upload 3D model files in OBJ and FBX formats.
+
+2. Display the uploaded models in the scene using Threejs with full mesh/material support.
+
+3. Optimize model size and rendering for smooth performance.
+
+CAMERA & USER CONTROLS
+
+4. Add two camera modes
+
+a) Orbit mode default, with OrbitControls (rotate, pan, zoom).
+
+b) First-person mode simulate walking through the model like a person inside a building or space
+
+5. In first-person mode
+
+Use PointerLockControls or First PersonControls from Three.js
+
+Movement: WASD or arrow keys.
+
+Mouse look around (360°).
+
+Limit vertical look to avoid unnatural head flips.
+
+Add option in the Ul to toggle between "Orbit" and "First Person"
+
+ANNOTATIONS:
+
+6. Let users click inside the 3D scene to place floating annotations (text boxes).
+
+-Editable title description.
+
+- Anchor them to 3D world coordinates
+
+Show/hide annotations in UI.
+
+Support drag or repositioning.
+
+TIME-BASED LIGHTING:
+
+7. Add a "Time of Day" system:
+
+Slider or clock picker (0-24 hours).
+
+Change sun direction and color based on time.
+
+Adjust ambient light and skybox colors to match.
+
+HDRI & ENVIRONMENT:
+
+8. Use an HDRI environment for realistic ambient light and sky:
+
+- Load a free HDRI (like 'venice_sunset_1k.hdr" from Polyhaven).
+
+Apply HDRI as both scene lighting and background.
+
+NIGHT MODE:
+
+9 if selected time is night (eg. 20:00-06:00)
+
+Reduce sunlight to 0.
+
+Automatically activate artificial point lights or spotlights in the scene.
+Allow user to toggle night lights on/off.
+
+UI DESIGN
+
+10. Use Tailwind CSS for layout and design.
+
+Sidebar or control panel with
+
+Upload model
+
+-Time of day slider
+
+Toggle Orbit/First-person view
+
+Toggle night lighting
+
+List and edit annotations
+
+Reset camera
+
+CODE & DEV:
+
+11. Use React Vite (or Next.js if preferred).
+
+12. Include code comments to explain all logic.
+
+13. Project should run locally via 'npm install' and 'npm run dev.
+
+DEPENDENCIES TO USE:
+
+React
+
+- Three.js
+
+- Tailwind CSS
+
+OBJLoader, FBXLoader
+
+- RGBELoader (for HDRI)
+
+- PointerLockControls or First PersonControls
+
+- Sky shader or Sky class for dynamic sky
+
+---
+
 ---
 
 ## 📝 Notes
